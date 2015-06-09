@@ -4,9 +4,8 @@ class CoinChanger
     change = coins
 
     coins.each do |coin, val|
-      num_coin = amount / val
-      change[coin] = num_coin
-      amount = amount % val
+      change[coin] = amount / val
+      amount %= val
     end
     change
   end
